@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="林楷舜的個人電子名片網站。">
+  <title>林楷舜 | Digital Profile</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <header class="site-header" data-reveal>
+    <a class="brand" href="#top" aria-label="Back to top">
+      <span class="brand-mark">K</span>
+      <span data-i18n="brand">林楷舜</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#about" data-i18n="navAbout">關於</a>
+      <a href="#proof" data-i18n="navProof">事蹟</a>
+      <a href="#research" data-i18n="navResearch">研究成果</a>
+      <a href="#radar" data-i18n="navRadar">能力雷達</a>
+      <a href="#contact" data-i18n="navContact">聯絡</a>
+    </nav>
+    <div class="header-actions" aria-label="Display controls">
+      <button class="pill-button" id="langToggle" type="button" aria-label="Switch language">EN</button>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle theme">
+        <span class="theme-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow kinetic" data-i18n="heroEyebrow">博士候選人</p>
+        <h1 class="hero-title">
+          <span data-i18n="heroName">林楷舜</span>
+          <span class="stroke-text" data-i18n="heroRole">醫療管理與數據策略新秀</span>
+        </h1>
+        <p class="hero-intro" data-i18n="heroIntro">把醫療現場的複雜訊號，整理成能被管理者、臨床團隊與病人一起理解的行動方案。</p>
+        <div class="hero-actions">
+          <a class="primary-button magnetic" href="#contact" data-i18n="heroCta">建立聯繫</a>
+          <a class="ghost-button magnetic" href="#research" data-i18n="heroSecond">查看研究成果</a>
+        </div>
+        <div class="quick-facts" aria-label="Profile highlights">
+          <article class="fact-card tilt-card">
+            <strong class="counter" data-target="3.92">0</strong>
+            <span data-i18n="factGpa">GPA / 4.3</span>
+          </article>
+          <article class="fact-card tilt-card">
+            <strong class="counter" data-target="12">0</strong>
+            <span data-i18n="factProjects">專案成果</span>
+          </article>
+          <article class="fact-card tilt-card">
+            <strong class="counter" data-target="6">0</strong>
+            <span data-i18n="factCerts">專業證照</span>
+          </article>
+        </div>
+      </div>
+      <div class="hero-visual" data-reveal>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <img src="assets/hero-profile.png" alt="林楷舜的科技風個人主視覺">
+        <div class="floating-panel panel-top">
+          <span data-i18n="panelFocus">Focus</span>
+          <strong data-i18n="panelFocusValue">醫療營運分析</strong>
+        </div>
+        <div class="floating-panel panel-bottom">
+          <span data-i18n="panelNow">Now</span>
+          <strong data-i18n="panelNowValue">AI 病患流程模擬</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Profile ticker">
+      <div class="ticker-track">
+        <span data-i18n="tickerOne">Healthcare Operations</span>
+        <span>Data Storytelling</span>
+        <span data-i18n="tickerTwo">Patient Journey</span>
+        <span>Strategy Sprint</span>
+        <span data-i18n="tickerThree">Evidence-Based Management</span>
+        <span data-i18n="tickerOne" aria-hidden="true">Healthcare Operations</span>
+        <span aria-hidden="true">Data Storytelling</span>
+        <span data-i18n="tickerTwo" aria-hidden="true">Patient Journey</span>
+        <span aria-hidden="true">Strategy Sprint</span>
+        <span data-i18n="tickerThree" aria-hidden="true">Evidence-Based Management</span>
+      </div>
+    </section>
+
+    <section class="section-shell split-section" id="about">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow" data-i18n="aboutEyebrow">About</p>
+        <h2 data-i18n="aboutTitle">關於我</h2>
+      </div>
+      <div class="bio-card glass-card tilt-card" data-reveal>
+        <p data-i18n="aboutBody">林楷舜目前為博士候選人，主修醫療管理、健康資料分析與服務設計。擅長把流程圖、問卷資料、儀表板與訪談洞察整合成可執行的改善提案。</p>
+        <dl class="bio-grid">
+          <div>
+            <dt data-i18n="eduLabel">學歷</dt>
+            <dd data-i18n="eduValue">博士候選人｜健康產業管理與醫療資料分析</dd>
+          </div>
+          <div>
+            <dt data-i18n="expLabel">經歷</dt>
+            <dd data-i18n="expValue">醫院流程改善實習生、校園健康資料專案 PM</dd>
+          </div>
+          <div>
+            <dt data-i18n="certLabel">證照</dt>
+            <dd data-i18n="certValue">Google Data Analytics、初階專案管理、病人安全教育訓練</dd>
+          </div>
+          <div>
+            <dt data-i18n="mottoLabel">一句話</dt>
+            <dd data-i18n="mottoValue">讓資料有溫度，讓管理有方向。</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section-shell" id="proof">
+      <div class="section-heading center" data-reveal>
+        <p class="eyebrow" data-i18n="proofEyebrow">Milestones</p>
+        <h2 data-i18n="proofTitle">事蹟</h2>
+      </div>
+      <div class="achievement-grid">
+        <article class="achievement-card tilt-card" data-reveal>
+          <span class="card-number">01</span>
+          <h3 data-i18n="achOneTitle">校園健康黑客松冠軍</h3>
+          <p data-i18n="achOneBody">用 24 小時產出睡眠風險分群原型，整合問卷、穿戴資料與行為建議。</p>
+        </article>
+        <article class="achievement-card tilt-card" data-reveal>
+          <span class="card-number">02</span>
+          <h3 data-i18n="achTwoTitle">國際交流簡報代表</h3>
+          <p data-i18n="achTwoBody">以英文發表臺灣智慧醫療服務觀察，獲選為管理學院跨校交流學生代表。</p>
+        </article>
+        <article class="achievement-card tilt-card" data-reveal>
+          <span class="card-number">03</span>
+          <h3 data-i18n="achThreeTitle">研究方法工作坊講者</h3>
+          <p data-i18n="achThreeBody">設計醫療管理資料視覺化短講，帶領 60 位同學完成互動式儀表板練習。</p>
+        </article>
+        <article class="achievement-card tilt-card" data-reveal>
+          <span class="card-number">04</span>
+          <h3 data-i18n="achFourTitle">病人安全改善提案入選</h3>
+          <p data-i18n="achFourBody">以跨科別溝通流程為題，提出交班資訊缺口偵測與追蹤回饋機制。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell" id="research">
+      <div class="section-heading center" data-reveal>
+        <p class="eyebrow" data-i18n="researchEyebrow">Research Outputs</p>
+        <h2 data-i18n="researchTitle">研究成果</h2>
+      </div>
+      <div class="achievement-grid research-grid">
+        <article class="achievement-card tilt-card" data-reveal>
+          <span class="card-number">R1</span>
+          <h3 data-i18n="workOneTitle">急診等候時間視覺化</h3>
+          <p data-i18n="workOneBody">以假想醫院資料建立 Power BI 儀表板，提出分流尖峰預警與護理人力調度模型。</p>
+        </article>
+        <article class="achievement-card tilt-card" data-reveal>
+          <span class="card-number">R2</span>
+          <h3 data-i18n="workTwoTitle">慢病照護 App 研究</h3>
+          <p data-i18n="workTwoBody">完成 48 份使用者訪談與服務藍圖，設計三階段回診提醒與家屬共照機制。</p>
+        </article>
+        <article class="achievement-card tilt-card" data-reveal>
+          <span class="card-number">R3</span>
+          <h3 data-i18n="workThreeTitle">醫院營運指標白皮書</h3>
+          <p data-i18n="workThreeBody">整理門診量能、床位週轉、病人滿意度與候診體驗，做成可追蹤的 KPI 架構。</p>
+        </article>
+        <article class="achievement-card tilt-card" data-reveal>
+          <span class="card-number">R4</span>
+          <h3 data-i18n="workFourTitle">健康資料倫理摘要</h3>
+          <p data-i18n="workFourBody">撰寫 AI 輔助決策、資料去識別化與病人授權流程的虛擬研究摘要。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell dashboard-section" id="radar">
+      <div class="dashboard-copy" data-reveal>
+        <p class="eyebrow" data-i18n="dashEyebrow">Live Profile</p>
+        <h2 data-i18n="dashTitle">動態能力雷達</h2>
+        <p data-i18n="dashBody">虛擬人物資料以動態方式呈現，適合之後改成真實履歷、研究成果或作品集數據。</p>
+      </div>
+      <div class="skill-board glass-card" data-reveal>
+        <div class="skill-row">
+          <span data-i18n="skillOne">醫療流程分析</span>
+          <div class="bar"><i style="--value: 94%"></i></div>
+        </div>
+        <div class="skill-row">
+          <span data-i18n="skillTwo">資料視覺化</span>
+          <div class="bar"><i style="--value: 88%"></i></div>
+        </div>
+        <div class="skill-row">
+          <span data-i18n="skillThree">簡報與溝通</span>
+          <div class="bar"><i style="--value: 91%"></i></div>
+        </div>
+        <div class="skill-row">
+          <span data-i18n="skillFour">服務設計</span>
+          <div class="bar"><i style="--value: 83%"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell contact-section" id="contact">
+      <div class="contact-card glass-card" data-reveal>
+        <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
+        <h2 data-i18n="contactTitle">聯絡我</h2>
+        <p data-i18n="contactBody">歡迎交換醫療管理、健康科技、資料視覺化與學生專案合作機會。</p>
+        <div class="contact-links">
+          <a class="magnetic" href="mailto:kaishun.lin@example.com">Email</a>
+          <a class="magnetic" href="#" aria-label="LinkedIn profile">LinkedIn</a>
+          <a class="magnetic" href="#" aria-label="Instagram profile">Instagram</a>
+          <a class="magnetic" href="#" aria-label="Line contact">LINE</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span data-i18n="footer">© 2026 林楷舜. Fictional profile demo.</span>
+  </footer>
+</body>
+</html>
